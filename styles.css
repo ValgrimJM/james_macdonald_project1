@@ -1,0 +1,485 @@
+article,aside,details,figcaption,figure,footer,header,hgroup,nav,section,summary{display:block;}audio,canvas,video{display:inline-block;}audio:not([controls]){display:none;height:0;}[hidden]{display:none;}html{font-family:sans-serif;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;}a:focus{outline:thin dotted;}a:active,a:hover{outline:0;}h1{font-size:2em;}abbr[title]{border-bottom:1px dotted;}b,strong{font-weight:700;}dfn{font-style:italic;}mark{background:#ff0;color:#000;}code,kbd,pre,samp{font-family:monospace, serif;font-size:1em;}pre{white-space:pre-wrap;word-wrap:break-word;}q{quotes:\201C \201D \2018 \2019;}small{font-size:80%;}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline;}sup{top:-.5em;}sub{bottom:-.25em;}img{border:0;}svg:not(:root){overflow:hidden;}fieldset{border:1px solid silver;margin:0 2px;padding:.35em .625em .75em;}button,input,select,textarea{font-family:inherit;font-size:100%;margin:0;}button,input{line-height:normal;}button,html input[type=button],/* 1 */input[type=reset],input[type=submit]{-webkit-appearance:button;cursor:pointer;}button[disabled],input[disabled]{cursor:default;}input[type=checkbox],input[type=radio]{box-sizing:border-box;padding:0;}input[type=search]{-webkit-appearance:textfield;-moz-box-sizing:content-box;-webkit-box-sizing:content-box;box-sizing:content-box;}input[type=search]::-webkit-search-cancel-button,input[type=search]::-webkit-search-decoration{-webkit-appearance:none;}textarea{overflow:auto;vertical-align:top;}table{border-collapse:collapse;border-spacing:0;}body,figure{margin:0;}legend,button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0;}
+
+.clearfix:after {visibility: hidden; display: block; font-size: 0; content: ''; clear: both; height: 0; }
+
+* { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+
+
+*{
+    font-family: "Lora", serif;
+}
+button, input, textarea{
+    border: none;
+}
+html{
+    font-size: 10px;
+}
+.wrapper, .footerWrapper, .mainWrapper{
+    margin: 0 auto;
+}
+.wrapper{
+    max-width: 1920px;
+    position: relative;
+}
+ul{
+    list-style-type: none;
+    padding-left: 0;
+}
+h1, h2, h3, h4, h5, h6, a, button, .caps{
+    text-transform: uppercase;
+    font-family: "Raleway", sans-serif;
+    font-weight: bold;
+    line-height: 24px;
+}
+h1{
+    font-size: 4.6rem;
+    margin: auto;
+}
+h2{
+    font-size: 3.7rem;
+}
+h3{
+    font-size: 3.0rem;
+}
+.contact h3{
+    font-size: 2.5rem;
+}
+h4{
+    font-size: 1.8rem;
+}
+h5{
+    font-size: 1.4rem;
+}
+input{
+    text-indent: 10px;
+}
+input, textarea{
+    font-family: "Lora", serif;
+    font-size: 1.3rem;
+}
+a{
+    text-decoration: none;
+    color: #000;
+    font-size: 1.6rem;
+}
+p{
+    font-size: 1.4rem;
+}
+p, .workHours,.contactDetails .contactPara, .relatedPosts ul li span{
+    color: #666666;
+}
+/**************** Header styles ****************/
+h1{
+    float:left;
+}
+header{
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    padding: 20px;
+}
+header.home{
+    background-image: url(delicious/assets/home-1.jpeg);
+}
+header.contact{
+    background-image: url(delicious/assets/contact-1.jpeg);
+}
+header.blog{
+    background-image: url(delicious/assets/blog-1.jpeg);
+}
+header ul{
+    float: right;
+}
+header li{
+    float: left;
+    margin: 0 10px;
+}
+.caps, header li:first-child a, footer h2, .recipText hr, .ourRestaurants hr, .hungryClients hr, .contactForm a{
+    color: #64a604;
+}
+header li:nth-last-child(2) a{
+    position: relative;
+}
+header li:nth-last-child(2) a p {
+    position: absolute;
+    top: 0px;
+    right:-13px;
+    background-color: #64a604;
+    border-radius: 50%;
+    font-size: 1.0rem;
+    height:20px;
+    width:20px;
+    line-height: 20px;
+    text-align: center;
+}
+/************** Popular Recipies styles **************/
+.popularRecipes img{
+    
+    float: right;
+    width: 50%;
+}
+.recipText{
+    float:left;
+    width: 50%;
+    text-align: center;
+    padding: 30px;
+}
+.recipText p {
+    text-align: center;
+    width:75%;
+    margin:0 auto;
+}
+.recipText button, .leaveComment button{
+    background-color: #64a604;
+    width: 200px;
+    height: 57px;
+    font-size: 1.4rem;
+    margin:25px;
+}
+.recipText hr, .ourRestaurants hr, .hungryClients hr{
+    border-style: solid;
+    border-width: 4px;
+    margin: 20px 42%;
+}
+/* ********************Categories Styles******************* */
+.categories{
+    /* display: inline-block; */
+    clear: both;
+}
+.categories img{
+    float: left;
+    width: 50%;
+}
+.catText{
+    float: left;
+    width:50%;
+    background-color: #f2f2f2;
+}
+.catText li{
+    float: left;
+    width: 50%;
+}
+.catText li i{
+    font-size: 36px;
+    width: 25%;
+    float: left;
+}
+.catText li h4{
+    width: 75%;
+    float: left;
+    margin: 0;
+}
+.catText li p, .ourRestaurants p, .tagsShare p, .contactDetails p, .contactForm input, .contactForm textarea, .email input, footer p, footer a, .tagsShare i, .tagsShare a, .relatedPosts ul p, .leaveComment p, .leaveComment input::placeholder, .leaveComment textarea::placeholder {
+color: #999999;
+}
+.catText li p, footer p, footer a, .contactDetails p, .tagsShare p, .leaveComment p{
+    font-size: 1.3rem;
+}
+.catText li p{
+    float: right;
+    width: 75%;
+}
+/* *****************Restaurants Styles ***************** */
+.ourRestaurants{
+    height: 100vh;
+    clear: both;
+    text-align: center;
+    padding: 10%;
+}
+.ourRestaurants hr, .hungryClients hr{
+    margin: 20px 45%;
+}
+.restaurantsImg{
+    position: relative;
+}
+.restaurantsImg img:last-child{
+    position: absolute;
+    top: -38%;
+    right: 12%;
+}
+/* *****************PhotoBar Styles***************** */
+.photoBar.home img{
+    width: 33.3%;
+    float: left;
+}
+.photoBar.contact img{
+    width: 100%;
+    display: block;
+}
+/* *****************Hungry Clients Styles***************** */
+.hungryClients{
+    clear: both;
+    height: 70vh;
+    background-color: #dded9a;
+    text-align: center;
+    padding: 10%;
+    position: relative;
+}
+.hungryClients p{
+    color: #000000;
+    font-style: italic; 
+    width: 50%;
+    margin: 0 auto;
+}
+.hungryClients i, .subscribe i, .subscribeNow i, footer h4, header li:nth-last-child(2) a p, .recipText button, .leaveComment button{
+    color: #ffffff;
+}
+.hungryClients i{
+    font-size: 4.8rem;
+    position: absolute;
+}
+.hungryClients > i:first-of-type{
+    top: 41%;
+    left: 25%;
+}
+.hungryClients > i:last-of-type{
+    bottom: 24%;
+    right: 25%;
+}
+.arrows{
+    display: inline-block;
+    margin-top:40px;
+}
+.arrows i{
+    font-size: 3.6rem;
+    position: relative;
+    margin: 0 10px;
+}
+/* *****************Footer Styles***************** */
+footer{
+    background-color: #2e2e2e;
+    height: 57vh;
+}
+.footerWrapper{
+    width: 75%;
+}
+footer hr{
+    color: #474747;
+    height: 1px;
+}
+footer ul{
+    padding-left: 0px;
+}
+footer p, footer a{
+    text-transform: none;
+    line-height: 25px;
+}
+footer section:first-child{
+    padding-right: 15px;
+}
+footer section:last-child{
+    padding-left: 15px;
+}
+.footDelicious,.recentPosts, .subscribeNow{
+    width: 33.3%;
+    float: left;
+}
+.copyBar{
+    clear: both;
+    background-color: #252525;
+    padding: 5px 0;
+}
+.email input, .subscribe button{
+    height:46px;
+    float: left;
+}
+.email input{
+    background-color: #535353;
+    width: 75%;
+    
+}
+.subscribe button{
+    background-color: #64a604;
+    width:25%;
+    position: relative;
+}
+.subscribe i{
+    font-size: 2.0rem;
+    position: absolute;
+    top: 25%;
+    bottom: 25%;
+    left: 0;
+    right: 0;
+}
+.subscribeNow hr{
+    margin-top: 90px;
+}
+.subscribeNow li{
+    float: left;
+    margin: 0 10px;
+}
+/* *****************Contact Page Styles***************** */
+.contactForm{
+    float: left;
+    width: 60%;
+    padding: 0 15px 0 20%;
+}
+.contactForm input, .contactForm textarea{
+    height: 56px;
+    margin: 10px 0;
+}
+input[name="yourName"], input[name="emailAddress"]{
+    width: 48%;
+}
+input[name="yourName"]{
+    float: left;
+}
+input[name="emailAddress"]{
+    float: right;
+}
+input[name="subject"]{
+    width: 100%;
+    clear: both;
+}
+textarea[name="message"], .leaveComment textarea{
+    width: 100%;
+    height: 250px;
+    padding: 15px 10px 10px 10px;
+}
+.contactDetails, .contactForm input, .contactForm textarea, .authorDesc{
+    background-color: #f6f6f6;
+}
+.contactDetails{
+    float: right;
+    width: 40%;
+    height: 90vh;
+    padding: 20px;
+}
+.contactDetails .contactPara{
+    font-size: 1.4rem;
+}
+h5, .workDays, .comment p{
+    color: #333333;
+}
+
+/* *****************Blog Page Styles***************** */
+.mainWrapper{
+    width: 83%;
+}
+.blogPost h2{
+    margin-bottom: 0;
+}
+.blogPost p:first-of-type{
+    color: #000000;
+}
+.tagsShare h5{
+    display: inline-block;
+}
+.tagsShare i{
+    margin: 0 10px;
+}
+.tagsShare .tags a{
+    text-transform: none;
+    font-size: 1.4rem;
+}
+/* *****************Blog Page - Author Styles***************** */
+.author{
+    margin: 30px 0;
+}
+.author img, .author .authorDesc{
+    float: left;
+}
+.author img{
+    margin-right: 20px;
+}
+.authorDesc{
+    width: calc(100% - 189px);
+    padding: 15px;
+}
+.authorDesc h5{
+    margin: 10px 0;
+}
+/* *****************Blog Page - Related Posts Styles***************** */
+.relatedPosts{
+    clear: both;
+    padding-top: 25px;
+}
+.relatedPosts img{
+    width: 100%;
+}
+.relatedPosts h4{
+    margin: 10px 0;
+}
+.relatedPosts ul li{
+    float: left;
+    width: calc(33.3% - 20px);
+}
+.relatedPosts ul p{
+    font-size: 1.2rem;
+}
+.relatedPosts ul li:first-child{
+    margin-right: 30px;
+}
+.relatedPosts ul li:last-child{
+    margin-left: 30px;
+}
+/* *****************Blog Page - Comment Styles***************** */
+.commentsSection{
+    clear: both;
+}
+.comment img, .comment div{
+    float: left;
+}
+.comment img{
+    margin-right: 30px;
+}
+.comment div{
+    background-color: #efefef;
+    width: calc(100% - 100px);
+    padding: 10px;
+    margin-bottom: 20px;
+    position: relative;
+}
+.comment div:after{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 15px;
+    width: 0;
+    height: 0;
+    border: 15px solid transparent;
+    border-right-color: #efefef;
+    border-left: 0;
+    margin-top: 0;
+    margin-left: -15px;
+}
+.comment div p:first-child, .comment div p:last-child{
+    font-family: "Raleway", sans-serif;
+    font-weight: 700;
+}
+.comment div p:last-child{
+    font-size: 1.1rem;
+}
+.comment div span{
+    font-weight: 400;
+    font-size: 1.2rem;
+}
+/* *****************Blog Page - Leave Comment Styles***************** */
+.leaveComment{
+    clear: both;
+}
+.leaveComment h5{
+    margin: 0;
+}
+.leaveComment input, .leaveComment textarea{
+    border: 1px solid #cccccc;
+}
+.leaveComment input{
+    width: calc(33.3% - 20px);
+    height: 50px;
+    float: left;
+}
+.leaveComment input:first-of-type{
+    margin-right: 30px;
+}
+.leaveComment input:last-of-type{
+    margin-left: 30px;
+}
+.leaveComment textarea{
+    clear: both;
+    width: 100%;
+    margin-top: 20px;
+}
+.leaveComment button{
+    margin: 20px 0;
+}
