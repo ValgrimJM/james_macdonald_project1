@@ -18,13 +18,13 @@
         <header class="home" title=" Blueberry Line Juice with Rosemary">
             <h1>Delicious</h1>
             <ul>
-                <li><a href="#">Home</a></li>
+                <li><a href="home.html">Home</a></li>
                 <li><a href="#">About</a></li>
                 <li><a href="#">Recipes</a></li>
                 <li><a href="#">Nutrition</a></li>
-                <li><a href="#">Blog</a></li>
+                <li><a href="blog.html">Blog</a></li>
                 <li><a href="#">Shop</a></li>
-                <li><a href="#">Contact</a></li>
+                <li><a href="contact.html">Contact</a></li>
                 <li><a href="#"><i class="fas fa-shopping-bag"></i><p>2</p></a></li>
                 <li><a href="#"><i class="fas fa-search"></i></a></li>
             </ul>
@@ -34,12 +34,14 @@
             <!-- popular recepies section + image  -->
             <section class="popularRecipes">
                 <div class="recipText">
-                    <h3>Most Popular Recipes</h3>
-                    <hr>
-                    <p>
-                        Nori grape silver beet broccoli kombu beet greens fava bean potato quandong celery.  Bunya nuts black-eyed pea prarie turnip leek lentil turnip greens parsnip.  Sea lettuce water chestnut eggplant winter purslane fennel azuki bean earthnut pea sierra leone bologi leek soko chicory celtuce parsley jicama salsify.
-                    </p>
-                    <button>View Recipes</button>
+                    <div class="recipWrapper">
+                        <h3>Most Popular Recipes</h3>
+                        <hr>
+                        <p>
+                            Nori grape silver beet broccoli kombu beet greens fava bean potato quandong celery.  Bunya nuts black-eyed pea prarie turnip leek lentil turnip greens parsnip.  Sea lettuce water chestnut eggplant winter purslane fennel azuki bean earthnut pea sierra leone bologi leek soko chicory celtuce parsley jicama salsify.
+                        </p>
+                        <button>View Recipes</button>
+                    </div>
                 </div>
                 <img src="delicious/assets/home-2.jpeg" alt="Red Cabbage in a Bowl">
             </section>
@@ -129,20 +131,21 @@
             </section>
             <!-- Hungry Clients section -->
             <section class="hungryClients">
-                <h3>Hungry Clients</h3>
-                <hr>
-                <i class="fas fa-quote-left"></i>
-                <p>
-                    Beetroot water spinach okra water chestnut ricebean pea catsear courgette summer purslane. Water spinach arugula pea tatsoi
-                    aubergine spring onion bush tomato kale radicchio turnip chicory salsify pea sprouts fava bean. Dandelion zucchini burdock
-                    yarrow chickpea dandelion.
-                </p>
-                <div class="arrows">
-                    
-                    <i class="fas fa-angle-left"></i>
-                    <i class="fas fa-angle-right"></i>
+                <div class="hungryWrapper">
+                    <h3>Hungry Clients</h3>
+                    <hr>
+                    <i class="fas fa-quote-left"></i>
+                    <p>
+                        Beetroot water spinach okra water chestnut ricebean pea catsear courgette summer purslane. Water spinach arugula pea tatsoi
+                        aubergine spring onion bush tomato kale radicchio turnip chicory salsify pea sprouts fava bean. Dandelion zucchini burdock
+                        yarrow chickpea dandelion.
+                    </p>
+                    <div class="arrows">
+                        <i class="fas fa-angle-left"></i>
+                        <i class="fas fa-angle-right"></i>
+                    </div>
+                    <i class="fas fa-quote-right"></i>
                 </div>
-                <i class="fas fa-quote-right"></i>
             </section>
         </main>
         <!-- Footer Bar -->
@@ -187,7 +190,7 @@
                     
                     <p>get all of our newest recipes immediatly in your inbox!</p>
                     <div class="email">
-                        <input type="text" placeholder="Enter your email" name="email-address">
+                        <input type="email" placeholder="Enter your email" name="email-address">
                     </div>
                     <div class="subscribe">
                         <form action="#">

@@ -12,7 +12,7 @@ button, input, textarea{
     border: none;
 }
 html{
-    font-size: 10px;
+    font-size: 9px;
 }
 .wrapper, .footerWrapper, .mainWrapper{
     margin: 0 auto;
@@ -75,6 +75,8 @@ h1{
 header{
     background-size: cover;
     background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
     height: 100vh;
     padding: 20px;
 }
@@ -83,9 +85,12 @@ header.home{
 }
 header.contact{
     background-image: url(delicious/assets/contact-1.jpeg);
+    height: 85vh;
 }
 header.blog{
     background-image: url(delicious/assets/blog-1.jpeg);
+    height: 70vh;
+    background-attachment: unset;
 }
 header ul{
     float: right;
@@ -114,7 +119,6 @@ header li:nth-last-child(2) a p {
 }
 /************** Popular Recipies styles **************/
 .popularRecipes img{
-    
     float: right;
     width: 50%;
 }
@@ -122,23 +126,33 @@ header li:nth-last-child(2) a p {
     float:left;
     width: 50%;
     text-align: center;
-    padding: 30px;
+}
+.recipWrapper{
+    width: 75%;
+    margin: 17% auto;
 }
 .recipText p {
+    margin-top: 40px;
     text-align: center;
-    width:75%;
-    margin:0 auto;
 }
 .recipText button, .leaveComment button{
     background-color: #64a604;
-    width: 200px;
-    height: 57px;
+    width: 150px;
+    height: 40px;
     font-size: 1.4rem;
     margin:25px;
 }
+.leaveComment button:hover, .recipText button:hover, .subscribe button:hover{
+    background-color: #fff;
+    color: #64a604;
+    border: 1px solid #64a604;
+}
+.subscribe button:hover i{
+    color: #64a604;
+}
 .recipText hr, .ourRestaurants hr, .hungryClients hr{
     border-style: solid;
-    border-width: 4px;
+    border-width: 2px;
     margin: 20px 42%;
 }
 /* ********************Categories Styles******************* */
@@ -154,15 +168,18 @@ header li:nth-last-child(2) a p {
     float: left;
     width:50%;
     background-color: #f2f2f2;
+    padding: 35px 30px;
 }
 .catText li{
     float: left;
     width: 50%;
+    margin-bottom: 20px;
 }
 .catText li i{
-    font-size: 36px;
+    font-size: 3.6rem;
     width: 25%;
     float: left;
+    text-align: center;
 }
 .catText li h4{
     width: 75%;
@@ -178,6 +195,7 @@ color: #999999;
 .catText li p{
     float: right;
     width: 75%;
+    line-height: 20px;
 }
 /* *****************Restaurants Styles ***************** */
 .ourRestaurants{
@@ -185,17 +203,23 @@ color: #999999;
     clear: both;
     text-align: center;
     padding: 10%;
+    margin-bottom: 80px;
+}
+.ourRestaurants p{
+    width: 66%;
+    margin: 0 auto;
 }
 .ourRestaurants hr, .hungryClients hr{
     margin: 20px 45%;
 }
 .restaurantsImg{
     position: relative;
+    margin-top: 60px;
 }
 .restaurantsImg img:last-child{
     position: absolute;
-    top: -38%;
-    right: 12%;
+    top: -40%;
+    right: 20%;
 }
 /* *****************PhotoBar Styles***************** */
 .photoBar.home img{
@@ -209,10 +233,15 @@ color: #999999;
 /* *****************Hungry Clients Styles***************** */
 .hungryClients{
     clear: both;
-    height: 70vh;
+    height: 75vh;
     background-color: #dded9a;
     text-align: center;
-    padding: 10%;
+    position: relative;
+}
+.hungryWrapper{
+    width: 75%;
+    margin: 0 auto;
+    padding: 10% 0;
     position: relative;
 }
 .hungryClients p{
@@ -221,20 +250,20 @@ color: #999999;
     width: 50%;
     margin: 0 auto;
 }
-.hungryClients i, .subscribe i, .subscribeNow i, footer h4, header li:nth-last-child(2) a p, .recipText button, .leaveComment button{
+.hungryClients i, .subscribe i, .subscribeNow i, footer h4, header li:nth-last-child(2) a p, .recipText button, .leaveComment button, header li a:hover, header li a:first-child:hover{
     color: #ffffff;
 }
 .hungryClients i{
-    font-size: 4.8rem;
+    font-size: 3.8rem;
     position: absolute;
 }
-.hungryClients > i:first-of-type{
-    top: 41%;
-    left: 25%;
+.hungryWrapper > i:first-of-type{
+    top: 42%;
+    left: 20%;
 }
-.hungryClients > i:last-of-type{
-    bottom: 24%;
-    right: 25%;
+.hungryWrapper > i:last-of-type{
+    bottom: 40%;
+    right: 20%;
 }
 .arrows{
     display: inline-block;
@@ -248,7 +277,8 @@ color: #999999;
 /* *****************Footer Styles***************** */
 footer{
     background-color: #2e2e2e;
-    height: 57vh;
+    height: 75vh;
+    padding-top: 40px;
 }
 .footerWrapper{
     width: 75%;
@@ -264,15 +294,22 @@ footer p, footer a{
     text-transform: none;
     line-height: 25px;
 }
+footer section{
+    margin-bottom: 40px;
+}
 footer section:first-child{
-    padding-right: 15px;
+    margin-right: 60px;
 }
 footer section:last-child{
-    padding-left: 15px;
+    margin-left: 60px;
 }
 .footDelicious,.recentPosts, .subscribeNow{
-    width: 33.3%;
+    width: calc(33.3% - 40px);
     float: left;
+}
+.recentPosts a{
+    font-weight: 400;
+    line-height: 35px;
 }
 .copyBar{
     clear: both;
@@ -296,7 +333,7 @@ footer section:last-child{
 .subscribe i{
     font-size: 2.0rem;
     position: absolute;
-    top: 25%;
+    top: 30%;
     bottom: 25%;
     left: 0;
     right: 0;
@@ -308,14 +345,20 @@ footer section:last-child{
     float: left;
     margin: 0 10px;
 }
+.subscribeNow ul li a:hover i{
+    color: #64a604;
+}
 /* *****************Contact Page Styles***************** */
 .contactForm{
     float: left;
     width: 60%;
     padding: 0 15px 0 20%;
 }
+.contactForm a{
+    font-size: 1.4rem;
+}
 .contactForm input, .contactForm textarea{
-    height: 56px;
+    height: 30px;
     margin: 10px 0;
 }
 input[name="yourName"], input[name="emailAddress"]{
@@ -342,7 +385,7 @@ textarea[name="message"], .leaveComment textarea{
 .contactDetails{
     float: right;
     width: 40%;
-    height: 90vh;
+    height: 80vh;
     padding: 20px;
 }
 .contactDetails .contactPara{
@@ -354,16 +397,28 @@ h5, .workDays, .comment p{
 
 /* *****************Blog Page Styles***************** */
 .mainWrapper{
-    width: 83%;
+    width: 70%;
 }
 .blogPost h2{
     margin-bottom: 0;
+    margin-top: 100px;
+}
+.blogPost hr, .relatedPosts hr, .commentsSection hr{
+    color: #cccccc;
+}
+.blogPost p{
+    line-height: 2.5rem;
 }
 .blogPost p:first-of-type{
     color: #000000;
+    margin-bottom: 5%;
+}
+.blogPost p:last-of-type{
+    margin-bottom: 30px;
 }
 .tagsShare h5{
     display: inline-block;
+    margin: 10px 0;
 }
 .tagsShare i{
     margin: 0 10px;
@@ -384,7 +439,10 @@ h5, .workDays, .comment p{
 }
 .authorDesc{
     width: calc(100% - 189px);
-    padding: 15px;
+    padding: 25px;
+}
+.authorDesc p{
+    line-height: 27px;
 }
 .authorDesc h5{
     margin: 10px 0;
@@ -394,11 +452,18 @@ h5, .workDays, .comment p{
     clear: both;
     padding-top: 25px;
 }
+.relatedPosts a{
+    font-weight: normal;
+    text-transform: none;
+}
 .relatedPosts img{
     width: 100%;
 }
 .relatedPosts h4{
     margin: 10px 0;
+}
+.relatedPosts ul li div{
+    margin-bottom: 25px;
 }
 .relatedPosts ul li{
     float: left;
@@ -441,7 +506,7 @@ h5, .workDays, .comment p{
     border-right-color: #efefef;
     border-left: 0;
     margin-top: 0;
-    margin-left: -15px;
+    margin-left: -10px;
 }
 .comment div p:first-child, .comment div p:last-child{
     font-family: "Raleway", sans-serif;
@@ -457,6 +522,7 @@ h5, .workDays, .comment p{
 /* *****************Blog Page - Leave Comment Styles***************** */
 .leaveComment{
     clear: both;
+    margin-bottom: 90px;
 }
 .leaveComment h5{
     margin: 0;
@@ -466,7 +532,7 @@ h5, .workDays, .comment p{
 }
 .leaveComment input{
     width: calc(33.3% - 20px);
-    height: 50px;
+    height: 35px;
     float: left;
 }
 .leaveComment input:first-of-type{

@@ -18,13 +18,13 @@
         <header class="blog" title="Chicken with Side of Salad">
             <h1>Delicious</h1>
             <ul>
-                <li><a href="#">Home</a></li>
+                <li><a href="home.html">Home</a></li>
                 <li><a href="#">About</a></li>
                 <li><a href="#">Recipes</a></li>
                 <li><a href="#">Nutrition</a></li>
-                <li><a href="#">Blog</a></li>
+                <li><a href="blog.html">Blog</a></li>
                 <li><a href="#">Shop</a></li>
-                <li><a href="#">Contact</a></li>
+                <li><a href="contact.html">Contact</a></li>
                 <li><a href="#"><i class="fas fa-shopping-bag"></i><p>2</p></a></li>
                 <li><a href="#"><i class="fas fa-search"></i></a></li>
             </ul>
@@ -102,23 +102,29 @@
                     <ul>
                         <li>
                             <div>
-                                <img src="delicious/assets/blog-3.jpeg" alt="Strawberry Cake with Candles">
-                                <h4>How to bake the perfect cake</h4>
-                                <p>July 11, 2018 | by <span>Admin</span> | in <span>Recipes</span></p>
+                                <a href="#">
+                                    <img src="delicious/assets/blog-3.jpeg" alt="Strawberry Cake with Candles">
+                                    <h4>How to bake the perfect cake</h4>
+                                    <p>July 11, 2018 | by <span>Admin</span> | in <span>Recipes</span></p>
+                                </a>
                             </div>
                         </li>
                         <li>
                             <div>
-                                <img src="delicious/assets/blog-4.jpeg" alt="Cupcakes with Floral Designs">
-                                <h4>floral Cupcakes</h4>
-                                <p>July 19, 2018 | by <span>Admin</span> | in <span>Recipes</span></p>
+                                <a href="#">
+                                    <img src="delicious/assets/blog-4.jpeg" alt="Cupcakes with Floral Designs">
+                                    <h4>floral Cupcakes</h4>
+                                    <p>July 19, 2018 | by <span>Admin</span> | in <span>Recipes</span></p>
+                                </a>
                             </div>
                         </li>
                         <li>
                             <div>
-                                <img src="delicious/assets/blog-5.jpeg" alt=" Raw Salmon with Onion, Lime and Cilantro">
-                                <h4>Single post with image</h4>
-                                <p>July 22, 2018 | by <span>Admin</span> | in <span>Recipes</span></p>
+                                <a href="#">
+                                    <img src="delicious/assets/blog-5.jpeg" alt=" Raw Salmon with Onion, Lime and Cilantro">
+                                    <h4>Single post with image</h4>
+                                    <p>July 22, 2018 | by <span>Admin</span> | in <span>Recipes</span></p>
+                                </a>
                             </div>
                         </li>
                     </ul>
@@ -151,11 +157,11 @@
                     <h5>leave a comment</h5>
                     <p>Your email address will not be published. Required fields are marked *</p>
                     <form action="">
-                        <input type="text" name="" id=""placeholder="Name *">
-                        <input type="email" name="" id=""placeholder="Email *">
-                        <input type="text" name="" id=""placeholder="Your Website">
-                        <textarea name="" id="" placeholder="Comment"cols="30" rows="10"></textarea>
-                        <button type="submit">Submit Comment</button>
+                        <input type="text" name="name" id=""placeholder="Name *">
+                        <input type="email" name="email" class="email"id="email" placeholder="Email *">
+                        <input type="text" name="website" id="website" class="website" placeholder="Your Website">
+                        <textarea name="comment" id="comment" class="comment" placeholder="Comment"cols="30" rows="10"></textarea>
+                        <button type="submit" class="submit" id="submit" name="submit">Submit Comment</button>
                     </form>
                 </section>
             </section>
@@ -215,7 +221,7 @@
             
                         <p>get all of our newest recipes immediatly in your inbox!</p>
                         <div class="email">
-                            <input type="text" placeholder="Enter your email" name="email-address">
+                            <input type="email" placeholder="Enter your email" name="email-address">
                         </div>
                         <div class="subscribe">
                             <form action="#">
