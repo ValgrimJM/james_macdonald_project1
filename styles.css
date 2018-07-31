@@ -99,7 +99,7 @@ header li{
     float: left;
     margin: 0 10px;
 }
-.caps, header li:first-child a, footer h2, .recipText hr, .ourRestaurants hr, .hungryClients hr, .contactForm a{
+.caps, header li.active a, footer h2, .recipText hr, .ourRestaurants hr, .hungryClients hr, .contactForm a, .tagsShare a:hover, .tagsShare i:hover, .subscribe button:hover i, .recentPosts a:hover, .subscribeNow ul li a:hover i, .tagsShare a:hover, .tagsShare i:hover, .leaveComment button:hover, .recipText button:hover, .subscribe button:hover, .arrows a:hover i{
     color: #64a604;
 }
 header li:nth-last-child(2) a{
@@ -144,11 +144,7 @@ header li:nth-last-child(2) a p {
 }
 .leaveComment button:hover, .recipText button:hover, .subscribe button:hover{
     background-color: #fff;
-    color: #64a604;
     border: 1px solid #64a604;
-}
-.subscribe button:hover i{
-    color: #64a604;
 }
 .recipText hr, .ourRestaurants hr, .hungryClients hr{
     border-style: solid;
@@ -283,6 +279,9 @@ footer{
 .footerWrapper{
     width: 75%;
 }
+footer h2{
+    margin: 21px 0;
+}
 footer hr{
     color: #474747;
     height: 1px;
@@ -298,13 +297,13 @@ footer section{
     margin-bottom: 40px;
 }
 footer section:first-child{
-    margin-right: 60px;
+    margin-right: 150px;
 }
 footer section:last-child{
-    margin-left: 60px;
+    margin-left: 150px;
 }
 .footDelicious,.recentPosts, .subscribeNow{
-    width: calc(33.3% - 40px);
+    width: calc(33.3% - 100px);
     float: left;
 }
 .recentPosts a{
@@ -345,9 +344,6 @@ footer section:last-child{
     float: left;
     margin: 0 10px;
 }
-.subscribeNow ul li a:hover i{
-    color: #64a604;
-}
 /* *****************Contact Page Styles***************** */
 .contactForm{
     float: left;
@@ -358,7 +354,7 @@ footer section:last-child{
     font-size: 1.4rem;
 }
 .contactForm input, .contactForm textarea{
-    height: 30px;
+    height: 40px;
     margin: 10px 0;
 }
 input[name="yourName"], input[name="emailAddress"]{
@@ -390,6 +386,8 @@ textarea[name="message"], .leaveComment textarea{
 }
 .contactDetails .contactPara{
     font-size: 1.4rem;
+    width: 60%;
+    line-height: 24px;
 }
 h5, .workDays, .comment p{
     color: #333333;
@@ -408,6 +406,7 @@ h5, .workDays, .comment p{
 }
 .blogPost p{
     line-height: 2.5rem;
+    margin-bottom: 26px;
 }
 .blogPost p:first-of-type{
     color: #000000;
@@ -456,6 +455,21 @@ h5, .workDays, .comment p{
     font-weight: normal;
     text-transform: none;
 }
+.relatedPosts ul li{
+    position: relative;
+}
+.relatedPosts ul li .overlay{
+    position: absolute;
+    height: 152px;
+}
+.relatedPosts ul li:hover .overlay{
+    background-color: #64a604;
+    opacity: 0.5;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+}
 .relatedPosts img{
     width: 100%;
 }
@@ -499,14 +513,15 @@ h5, .workDays, .comment p{
     content: "";
     position: absolute;
     left: 0;
-    top: 15px;
+    top: 10px;
     width: 0;
     height: 0;
     border: 15px solid transparent;
     border-right-color: #efefef;
     border-left: 0;
     margin-top: 0;
-    margin-left: -10px;
+    margin-left: -15px;
+    border-width: 7px 15px 7px 0;
 }
 .comment div p:first-child, .comment div p:last-child{
     font-family: "Raleway", sans-serif;
